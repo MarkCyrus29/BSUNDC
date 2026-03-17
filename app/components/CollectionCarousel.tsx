@@ -14,84 +14,84 @@ interface CollectionItem {
 
 const collections: CollectionItem[] = [
   {
-    image: "/images/duet.png",
+    image: "/images/carousel/duet.png",
     overline: "Smart Technology",
     title: "DUET Collection",
     description:
       "Intelligent sensor taps that unite soap and water in a single, seamless gesture.",
   },
   {
-    image: "/images/s2.png",
+    image: "/images/carousel/s2.png",
     overline: "Residential",
     title: "S2 Collection",
     description:
       "A harmonious balance of form and function for residential bathrooms.",
   },
   {
-    image: "/images/sus.png",
+    image: "/images/carousel/sus.png",
     overline: "Stainless Steel",
     title: "SUS Collection",
     description:
       "Crafted from premium 304 stainless steel — enduring elegance.",
   },
   {
-    image: "/images/line.png",
-    overline: "Minimalist",
-    title: "LINE Collection",
-    description:
-      "Reduced to its essence — clean geometric taps, every line deliberate.",
-  },
-  {
-    image: "/images/shower.png",
+    image: "/images/carousel/shower-product.png",
     overline: "Shower Systems",
-    title: "Shower Collection",
+    title: "Shower Product Collection",
     description:
       "Thermostatic controls, rain systems, and multi-functional hand showers.",
   },
   {
-    image: "/images/hero.png",
-    overline: "Kitchen",
-    title: "Kitchen Collection",
+    image: "/images/carousel/line.png",
+    overline: "Minimalist",
+    title: "LINE Collection - Taps",
     description:
-      "A curated array of sinks, faucets, and accessories for the modern kitchen.",
+      "Reduced to its essence — clean geometric taps, every line deliberate.",
   },
   {
-    image: "/images/about.png",
-    overline: "Ceramics",
-    title: "Bathroom Ceramics",
+    image: "/images/carousel/self-closing-taps.png",
+    overline: "Flush Valve Collection",
+    title: "Self Closing Tap",
     description:
-      "Rimless toilets, sculptural washbasins, and wall-hung urinals.",
+      "Water-saving, high durability, efficient management.",
   },
   {
-    image: "/images/duet.png",
-    overline: "Sensor Taps",
-    title: "Sensor Products",
+    image: "/images/carousel/sensor.png",
+    overline: "Sensor Products",
+    title: "Sensor Product Collection",
     description:
       "Touchless technology for hospitals, commercial spaces, and public restrooms.",
   },
   {
-    image: "/images/s2.png",
-    overline: "Accessories",
-    title: "Bathroom Accessories",
+    image: "/images/carousel/kitchen-products.png",
+    overline: "Kitchen Collection",
+    title: "Kitchen Products Collection",
     description:
-      "Towel bars, robe hooks, soap dispensers — every detail considered.",
+      "A curated array of sinks, faucets, and accessories for the modern kitchen.",
   },
   {
-    image: "/images/sus.png",
+    image: "/images/carousel/bathroom.png",
+    overline: "Bathroom Ceramics",
+    title: "Bathroom Collection",
+    description:
+      "Rimless toilets, sculptural washbasins, and wall-hung urinals.",
+  }, 
+  {
+    image: "/images/carousel/furniture.png",
     overline: "Furniture",
     title: "Furniture Collection",
     description:
       "Vanity units and storage designed to complement our fixture lines.",
   },
   {
-    image: "/images/line.png",
+    image: "/images/carousel/bidet.png",
     overline: "Hygiene",
     title: "Bidet Spray Collection",
     description:
       "Precision-engineered bidet systems for comfort and personal hygiene.",
   },
   {
-    image: "/images/shower.png",
+    image: "/images/carousel/fittings.png",
     overline: "Fittings",
     title: "Fittings Collection",
     description:
