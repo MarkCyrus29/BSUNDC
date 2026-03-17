@@ -51,11 +51,11 @@ export default function Home() {
       <Navbar />
 
       {/* ===== HERO ===== */}
-      <section className="relative min-h-screen flex items-end bg-alabaster overflow-hidden">
-        <div className="mx-auto max-w-[1600px] w-full px-6 md:px-16 pb-16 md:pb-24 pt-32 md:pt-40">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
+      <section className="relative lg:min-h-screen flex items-center lg:items-center bg-alabaster overflow-hidden">
+        <div className="mx-auto max-w-[1600px] w-full px-6 md:px-16 pb-16 md:pb-24 pt-28 lg:pt-32">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 lg:items-start">
             {/* Left — Copy */}
-            <div className="lg:col-span-5 lg:col-start-1 order-2 lg:order-1">
+            <div className="lg:col-span-5 lg:col-start-1">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -64,31 +64,32 @@ export default function Home() {
                   delay: 0.4,
                   ease: [0.25, 0.46, 0.45, 0.94],
                 }}
+                className="flex flex-col items-center text-center lg:items-start lg:text-left"
               >
-                <Overline withLine className="mb-6">
+                <Overline withLine className="mb-6 justify-center lg:justify-start w-full">
                   Bathroom · Sanitary · Construction
                 </Overline>
 
-                <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl leading-[0.9] tracking-tight mb-8">
+                <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight mb-8">
                   Engineered{" "}
                   <em className="text-gold not-italic">Precision</em>,<br />
                   Designed{" "}
                   <em className="text-gold not-italic italic">Beauty</em>
                 </h1>
 
-                <p className="font-body text-base md:text-lg text-warm-gray leading-relaxed max-w-md mb-10">
+                <p className="font-body text-base md:text-lg text-warm-gray leading-relaxed max-w-md mb-10 mx-auto lg:mx-0">
                   Premium faucets, fixtures, and sanitary products — developed
                   in Germany & Denmark, trusted across Southeast Asia.
                 </p>
 
-                <div className="flex items-center gap-4">
-                  <a href="#collections">
-                    <Button variant="primary" size="lg" className="group">
+                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full sm:w-auto">
+                  <a href="#collections" className="w-full sm:w-auto">
+                    <Button variant="primary" size="lg" className="group w-full sm:w-auto">
                       Explore Collections
                     </Button>
                   </a>
-                  <a href="#contact">
-                    <Button variant="secondary" size="lg">
+                  <a href="#contact" className="w-full sm:w-auto">
+                    <Button variant="secondary" size="lg" className="w-full sm:w-auto">
                       Contact Us
                     </Button>
                   </a>
@@ -97,7 +98,7 @@ export default function Home() {
             </div>
 
             {/* Right — Hero Image */}
-            <div className="lg:col-span-6 lg:col-start-7 order-1 lg:order-2 relative">
+            <div className="hidden lg:block lg:col-span-6 lg:col-start-7 relative">
               <motion.div
                 initial={{ opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -111,7 +112,7 @@ export default function Home() {
                   src="/images/hero.png"
                   alt="BSC premium chrome faucet on marble countertop"
                   aspect="4/5"
-                  priority
+                  priority  
                   className="shadow-[0_8px_32px_rgba(0,0,0,0.12)]"
                 />
 
@@ -191,7 +192,7 @@ export default function Home() {
             }}
           >
             <EditorialImage
-              src="/images/about.png"
+              src="/images/portrait.png"
               alt="Precision engineering of BSC faucet components"
               aspect="3/4"
               className="shadow-[0_4px_24px_rgba(0,0,0,0.08)]"
@@ -235,48 +236,44 @@ export default function Home() {
       </SectionWrapper>
 
       {/* ===== FLAGSHIP PRODUCT — SHOWER ===== */}
-      <SectionWrapper className="border-t border-charcoal/10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Image */}
+      {/* ===== FLAGSHIP PRODUCT — SHOWER ===== */}
+      <section className="border-t border-charcoal/10">
+        {/* MOBILE: image with text overlay */}
+        <div className="lg:hidden relative">
           <motion.div
-            className="lg:col-span-6 lg:col-start-1 relative"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{
-              duration: 0.9,
-              ease: [0.25, 0.46, 0.45, 0.94],
-            }}
+            transition={{ duration: 0.9 }}
           >
             <EditorialImage
               src="/images/shower.png"
               alt="BSC premium rain shower system"
-              aspect="5/6"
-              className="shadow-[0_8px_32px_rgba(0,0,0,0.1)]"
+              aspect="3/4"
+              className="w-full"
             />
-            {/* Vertical label */}
-            <span className="hidden lg:block vertical-text absolute -right-10 top-8 font-body text-[10px] uppercase tracking-[0.3em] text-warm-gray/40">
-              Flagship / Shower Series
-            </span>
           </motion.div>
 
-          {/* Copy */}
+          {/* Gradient overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+
+          {/* Text content overlaid */}
           <motion.div
-            className="lg:col-span-5 lg:col-start-8"
+            className="absolute inset-x-0 bottom-0 p-6 pb-10"
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
             variants={stagger}
           >
             <motion.div variants={fadeUp}>
-              <Overline withLine className="mb-6">
+              <Overline withLine dark className="mb-4">
                 Flagship
               </Overline>
             </motion.div>
 
             <motion.h2
               variants={fadeUp}
-              className="font-heading text-4xl md:text-5xl lg:text-6xl leading-[0.95] tracking-tight mb-8"
+              className="font-heading text-3xl sm:text-4xl leading-[0.95] tracking-tight text-alabaster mb-4"
             >
               The <em className="text-gold italic">Shower</em>
               <br />
@@ -285,40 +282,110 @@ export default function Home() {
 
             <motion.p
               variants={fadeUp}
-              className="font-body text-base md:text-lg text-warm-gray leading-relaxed mb-8 max-w-md"
+              className="font-body text-sm text-alabaster/70 leading-relaxed mb-6 max-w-sm"
             >
-              Our Shower Products Collection redefines the daily ritual.
               Thermostatic precision controls, overhead rain systems, safe
-              shower seating, and multi-functional hand showers — every element
-              engineered for the perfect confluence of comfort and safety.
+              shower seating, and multi-functional hand showers — engineered
+              for the perfect confluence of comfort and safety.
             </motion.p>
-
-            <motion.ul variants={fadeUp} className="space-y-4 mb-10">
-              {[
-                "Thermostatic temperature control",
-                "Overhead rain shower systems",
-                "Safe shower seats for accessibility",
-                "Multi-functional hand showers",
-              ].map((feature) => (
-                <li key={feature} className="flex items-start gap-3">
-                  <span className="block w-1.5 h-1.5 mt-2 bg-gold shrink-0" />
-                  <span className="font-body text-sm text-charcoal/80 leading-relaxed">
-                    {feature}
-                  </span>
-                </li>
-              ))}
-            </motion.ul>
 
             <motion.div variants={fadeUp}>
               <a href="#contact">
-                <Button variant="primary" className="group">
+                <Button variant="secondary" className="border-alabaster/40 text-alabaster hover:bg-alabaster hover:text-charcoal">
                   Inquire Now
                 </Button>
               </a>
             </motion.div>
           </motion.div>
         </div>
-      </SectionWrapper>
+
+        {/* DESKTOP: side-by-side layout */}
+        <div className="hidden lg:block">
+          <div className="mx-auto max-w-[1600px] px-16 py-24">
+            <div className="grid grid-cols-12 gap-16 items-center">
+              {/* Image */}
+              <motion.div
+                className="col-span-6 col-start-1 relative"
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{
+                  duration: 0.9,
+                  ease: [0.25, 0.46, 0.45, 0.94],
+                }}
+              >
+                <EditorialImage
+                  src="/images/shower.png"
+                  alt="BSC premium rain shower system"
+                  aspect="5/6"
+                  className="shadow-[0_8px_32px_rgba(0,0,0,0.1)]"
+                />
+                <span className="vertical-text absolute -right-10 top-8 font-body text-[10px] uppercase tracking-[0.3em] text-warm-gray/40">
+                  Flagship / Shower Series
+                </span>
+              </motion.div>
+
+              {/* Copy */}
+              <motion.div
+                className="col-span-5 col-start-8"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, margin: "-80px" }}
+                variants={stagger}
+              >
+                <motion.div variants={fadeUp}>
+                  <Overline withLine className="mb-6">
+                    Flagship
+                  </Overline>
+                </motion.div>
+
+                <motion.h2
+                  variants={fadeUp}
+                  className="font-heading text-5xl lg:text-6xl leading-[0.95] tracking-tight mb-8"
+                >
+                  The <em className="text-gold italic">Shower</em>
+                  <br />
+                  Experience
+                </motion.h2>
+
+                <motion.p
+                  variants={fadeUp}
+                  className="font-body text-lg text-warm-gray leading-relaxed mb-8 max-w-md"
+                >
+                  Our Shower Products Collection redefines the daily ritual.
+                  Thermostatic precision controls, overhead rain systems, safe
+                  shower seating, and multi-functional hand showers — every element
+                  engineered for the perfect confluence of comfort and safety.
+                </motion.p>
+
+                <motion.ul variants={fadeUp} className="space-y-4 mb-10">
+                  {[
+                    "Thermostatic temperature control",
+                    "Overhead rain shower systems",
+                    "Safe shower seats for accessibility",
+                    "Multi-functional hand showers",
+                  ].map((feature) => (
+                    <li key={feature} className="flex items-start gap-3">
+                      <span className="block w-1.5 h-1.5 mt-2 bg-gold shrink-0" />
+                      <span className="font-body text-sm text-charcoal/80 leading-relaxed">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </motion.ul>
+
+                <motion.div variants={fadeUp}>
+                  <a href="#contact">
+                    <Button variant="primary" className="group">
+                      Inquire Now
+                    </Button>
+                  </a>
+                </motion.div>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ===== TRUST / PROOF (Stats) ===== */}
       <section className="bg-alabaster border-t border-b border-charcoal/10 px-6 md:px-16 py-16 md:py-24">
